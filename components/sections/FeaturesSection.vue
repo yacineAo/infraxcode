@@ -23,15 +23,15 @@
                         class="flex w-full items-start gap-4 md:gap-6 px-4 md:px-6 py-3 md:py-4 rounded-[15px] border-none cursor-pointer "
                         :class="step.isExpanded ? 'pt-3 md:pt-4 pb-5 md:pb-6 bg-[#ffffff1a]' : 'opacity-80'"
                         @click="toggleExpansion(index)">
-                        <div class="flex items-center gap-4 md:gap-6 p-0 w-full">
-                            <div v-if="step.isExpanded"
-                                class="relative w-[80px] md:w-[125px] h-[5px] ml-[-40px] md:ml-[-60px] rotate-90">
+                        <div class="flex items-center gap-4 md:gap-6 py-3 w-full">
+                            <div v-if="step.isExpanded" class="relative h-[6px] rotate-90 -ml-14 px-2">
                                 <div class="w-[80px] md:w-[125px] flex bg-[#ffffff1a] rounded-[30px]">
                                     <div class="mt-0 w-[5.29px] h-[5px] ml-0 bg-[#574fa1] rounded-[18.75px]" />
                                 </div>
                             </div>
 
-                            <div class="flex items-start gap-4 md:gap-6 flex-1">
+                            <div class="flex items-start gap-4 md:gap-6 flex-1"
+                                :class="step.isExpanded ? '-ml-16' : ''">
                                 <div
                                     class="inline-flex flex-col items-center justify-center gap-2 px-2 md:px-3.5 py-1 bg-[#ffffff1a] rounded-[5px] min-w-[32px] md:min-w-[37px]">
                                     <div class="font-semibold text-white text-xl md:text-2xl text-center">
@@ -188,24 +188,24 @@
 
         <!-- Join our alpha programme -->
         <div id="contact"
-            class="flex flex-col items-center gap-10 px-[200px] py-[100px] relative w-full translate-y-[-1rem] animate-fade-in"
+            class="flex flex-col items-center gap-6 sm:gap-10 px-4 sm:px-8 md:px-16 lg:px-[200px] py-8 sm:py-12 md:py-[100px] relative w-full translate-y-[-1rem] animate-fade-in"
             style="--animation-delay:1200ms">
             <div
-                class="flex flex-col w-full max-w-[670px] items-center gap-8 px-12 py-10 relative bg-[#ffffff14] rounded-[5px] border-none before:content-[''] before:absolute before:inset-0 before:p-0.5 before:rounded-[5px] before:[background:linear-gradient(221deg,rgba(255,255,255,1)_0%,rgba(255,255,255,0)_100%)] before:[-webkit-mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] before:[-webkit-mask-composite:xor] before:[mask-composite:exclude] before:z-[1] before:pointer-events-none">
+                class="flex flex-col w-full max-w-[670px] items-center gap-6 sm:gap-8 px-4 sm:px-12 py-8 sm:py-10 relative bg-[#ffffff14] rounded-[5px] border-none before:content-[''] before:absolute before:inset-0 before:p-0.5 before:rounded-[5px] before:[background:linear-gradient(221deg,rgba(255,255,255,1)_0%,rgba(255,255,255,0)_100%)] before:[-webkit-mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] before:[-webkit-mask-composite:xor] before:[mask-composite:exclude] before:z-[1] before:pointer-events-none">
                 <div class="p-0 w-full">
                     <div class="flex flex-col items-center gap-3 relative w-full">
                         <h2
-                            class="text-[40px] relative w-fit font-semibold text-white text-center tracking-[0] leading-[normal] whitespace-nowrap font-display">
+                            class="text-2xl sm:text-3xl md:text-[40px] relative w-fit font-semibold text-white text-center tracking-[0] leading-[normal] whitespace-nowrap font-display">
                             Join our alpha programme
                         </h2>
                         <p
-                            class="relative max-w-[476px] font-medium text-[#ffffffb2] text-base text-center tracking-[0] leading-[normal]">
+                            class="relative max-w-[476px] font-medium text-[#ffffffb2] text-sm sm:text-base text-center tracking-[0] leading-[normal]">
                             We are inviting people to join us as early alpha users to help
                             test and shape the future of Diverz
                         </p>
                     </div>
-                    <form class="flex flex-col items-center gap-10 relative w-full mt-8">
-                        <div class="flex flex-col items-start gap-8 relative w-full">
+                    <form class="flex flex-col items-center gap-8 sm:gap-10 relative w-full mt-6 sm:mt-8">
+                        <div class="flex flex-col items-start gap-6 sm:gap-8 relative w-full">
                             <div class="flex flex-col items-start gap-2 relative w-full">
                                 <label
                                     class="relative font-semibold text-white text-sm tracking-[0] leading-5 font-display">
@@ -237,7 +237,7 @@
                             </div>
                         </div>
                         <button
-                            class="flex w-[161px] h-auto items-center justify-center gap-2.5 px-6 py-3 relative bg-[#574fa1] rounded-[10px] hover:bg-[#574fa1]/90 transition-colors">
+                            class="w-full sm:w-[161px] h-auto flex items-center justify-center gap-2.5 px-6 py-3 relative bg-[#574fa1] rounded-[10px] hover:bg-[#574fa1]/90 transition-colors">
                             <span
                                 class="relative w-fit font-medium text-white text-base text-center tracking-[0] leading-[normal] whitespace-nowrap font-display">
                                 Submit
@@ -299,9 +299,9 @@
         </div>
 
         <div
-            class="absolute top-[4590px] left-[50%] -translate-x-1/2 w-[541px] h-[621px] bg-[#574fa1] rounded-[260.5px] blur-[355px] pointer-events-none md:left-[690px] md:translate-x-0" />
-   
-   </section>
+            class="absolute top-[4690px] left-[50%] -translate-x-1/2 w-[541px] h-[621px] bg-[#574fa1] rounded-[260.5px] blur-[355px] pointer-events-none md:left-[690px] md:translate-x-0" />
+
+    </section>
 </template>
 
 

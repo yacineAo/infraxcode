@@ -1,22 +1,22 @@
 <template>
-    <div id="features" class="flex flex-col w-full items-start gap-4 md:gap-8 pt-8 md:pt-12 pb-16 md:pb-[100px] px-4 sm:px-8 md:px-16 lg:px-[200px] relative overflow-hidden translate-y-[-1rem] animate-fade-in"
+    <div id="features"
+        class="flex flex-col w-full items-start gap-4 md:gap-8 pt-8 md:pt-12 px-4 sm:px-8 md:px-16 lg:px-[200px] relative overflow-hidden translate-y-[-1rem] animate-fade-in"
         :style="{ '--animation-delay': animationDelay }">
         <div class="flex flex-col w-full items-center gap-2 md:gap-4 relative">
-            <h2
-                class="relative w-fit font-semibold text-white text-3xl sm:text-4xl lg:text-[40px] font-display">
+            <h2 class="relative w-fit font-semibold text-white text-3xl sm:text-4xl lg:text-[40px] font-display">
                 {{ title }}
             </h2>
             <p class="relative max-w-[510px] font-medium text-[#ffffffb2] text-sm sm:text-base text-center">
                 {{ subtitle }}
             </p>
         </div>
-        <div class="flex flex-col lg:flex-row w-full relative mt-16 md:mt-[150px]">
-            <div
-                class="flex flex-col w-full lg:w-1/2 h-[80vh] overflow-y-auto pr-0 lg:pr-4 order-2 lg:order-1 scrollbar-hide snap-y snap-mandatory">
+    </div>
+    <div class="px-4 sm:px-8 md:px-16 lg:px-[200px]">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-4 w-full relative">
+            <div class="lg:order-1 order-2 flex flex-col pr-0 lg:pr-4">
                 <div v-for="(feature, index) in features" :key="index" :ref="el => textRefs[index] = el"
                     :data-index="index"
-                    class="flex flex-col items-start gap-4 md:gap-[19.21px] min-h-[80vh] snap-start scroll-mt-16 p-4 md:p-8 lg:p-0 relative"
-                    style="scroll-snap-align: start;">
+                    class="flex flex-col items-start gap-4 md:gap-[19.21px] min-h-[60vh] p-4 md:p-8 lg:p-0 relative">
                     <h3
                         class="relative w-fit bg-gradient-to-r from-[#574fa1] to-[#cca0ca] bg-clip-text text-transparent font-semibold text-2xl md:text-[32px] font-display">
                         {{ feature.title }}
@@ -32,9 +32,8 @@
                     </div>
                 </div>
             </div>
-            <div
-                class="w-full h-[80vh] sticky top-0 flex items-center justify-center pl-0 lg:pl-4 order-1 lg:order-2 px-4 lg:px-0 z-10">
-                <img class="w-full h-full rounded-[5px] md:rounded-[10px] object-cover"
+            <div class="w-full h-fit sticky top-0 flex items-center justify-center pl-0 lg:pl-4 order-1 lg:order-2 px-4 lg:px-0 z-10 lg:col-start-2">
+                <img class="w-full rounded-[5px] md:rounded-[10px] object-cover"
                     :alt="`Feature ${currentIndex + 1}`" :src="features[currentIndex]?.image" />
             </div>
         </div>
@@ -42,7 +41,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, nextTick } from 'vue'
 
 const props = defineProps({
     title: {
