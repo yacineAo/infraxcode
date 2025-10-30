@@ -40,7 +40,7 @@
                                 </div>
                                 <div class="flex flex-col items-start gap-2 md:gap-3 flex-1">
                                     <h3 class="font-semibold text-white text-xl md:text-2xl font-display">{{ step.title
-                                    }}</h3>
+                                        }}</h3>
                                     <p v-if="step.isExpanded && step.description"
                                         class="font-medium text-white text-sm md:text-base leading-[18px] md:leading-[21px]">
                                         {{ step.description }}
@@ -118,7 +118,7 @@
 
 
         <!-- Built for how engineers really work -->
-        <!-- <div class="flex flex-col items-start gap-8 md:gap-12 px-4 sm:px-8 md:px-16 lg:px-[200px] py-16 md:py-[100px] relative w-full translate-y-[-1rem] animate-fade-in"
+        <div class="flex flex-col items-start gap-8 md:gap-12 px-4 sm:px-8 md:px-16 lg:px-[200px] py-16 md:py-[100px] relative w-full translate-y-[-1rem] animate-fade-in"
             style="--animation-delay:800ms">
             <div class="items-start gap-3 w-full flex flex-col relative">
                 <div class="inline-flex items-start gap-1 flex-col relative">
@@ -127,7 +127,7 @@
                         Diverz
                     </h2>
                     <h3
-                        class="relative w-fit font-semibold text-white text-3xl sm:text-4xl lg:text-[40px] whitespace-nowrap font-display">
+                        class="relative w-fit font-semibold text-white text-3xl sm:text-4xl lg:text-[40px] font-display">
                         Built for how engineers really work
                     </h3>
                 </div>
@@ -137,122 +137,118 @@
                     real-world infrastructure operations
                 </p>
             </div>
-            <div class="flex flex-col items-start gap-[72px] relative w-full">
-                <div class="flex flex-wrap items-start justify-between relative w-full gap-4 md:gap-0">
-                    <div v-for="(feature, index) in engineerFeatures.slice(0, 3)" :key="index"
-                        class="inline-flex flex-col items-start gap-4 md:gap-6 relative max-w-[260px] flex-1 min-w-[200px]">
-                        <img class="relative w-10 h-10 md:w-12 md:h-12" :alt="`Icon ${index + 1}`"
-                            :src="feature.icon" />
-                        <div class="inline-flex items-start gap-3 flex-col relative">
-                            <div class="inline-flex items-start gap-1 flex-col relative">
-                                <h4 class="relative w-fit font-bold text-white text-xl md:text-2xl font-display">{{
-                                    feature.title }}</h4>
-                                <p class="relative w-[260px] font-semibold text-[#ffffff8c] text-base md:text-lg">{{
-                                    feature.subtitle }}</p>
-                            </div>
-                            <p class="relative w-[260px] font-medium text-[#ffffffb2] text-sm sm:text-base">{{
-                                feature.description }}</p>
+            <div class="grid grid-cols-1 md:grid-cols-3  justify-center relative w-full gap-5 ">
+                <div v-for="(feature, index) in engineerFeatures" :key="index"
+                    class="inline-flex flex-col items-start gap-4 md:gap-6 relative flex-1">
+                    <img class="relative w-10 h-10 md:w-12 md:h-12" :alt="`Icon ${index + 1}`" :src="feature.icon" />
+                    <div class="inline-flex items-start gap-3 flex-col relative">
+                        <div class="inline-flex items-start gap-1 flex-col relative">
+                            <h4 class="relative w-fit font-bold text-white text-xl md:text-2xl font-display">{{
+                                feature.title }}</h4>
+                            <p class="relative w-[260px] font-semibold text-[#ffffff8c] text-base md:text-lg">{{
+                                feature.subtitle }}</p>
                         </div>
-                    </div>
-                </div>
-                <div class="flex flex-wrap items-start justify-between relative w-full gap-4 md:gap-0">
-                    <div v-for="(feature, index) in engineerFeatures.slice(3, 6)" :key="index + 3"
-                        class="inline-flex flex-col items-start gap-4 md:gap-6 relative max-w-[260px] flex-1 min-w-[200px]">
-                        <img class="relative w-10 h-10 md:w-12 md:h-12" :alt="`Icon ${index + 4}`"
-                            :src="feature.icon" />
-                        <div class="inline-flex items-start gap-3 flex-col relative">
-                            <div class="inline-flex items-start gap-1 flex-col relative">
-                                <h4 class="relative w-fit font-bold text-white text-xl md:text-2xl font-display">{{
-                                    feature.title }}</h4>
-                                <p class="relative w-[260px] font-semibold text-[#ffffff8c] text-base md:text-lg">{{
-                                    feature.subtitle }}</p>
-                            </div>
-                            <p class="relative w-[260px] font-medium text-[#ffffffb2] text-sm sm:text-base">{{
-                                feature.description }}</p>
-                        </div>
+                        <p class="relative w-[260px] font-medium text-[#ffffffb2] text-sm sm:text-base">{{
+                            feature.description }}</p>
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
 
         <!-- Testimonial -->
-        <!-- <div class="flex flex-col items-center gap-6 md:gap-10 px-4 sm:px-8 md:px-16 lg:px-[200px] py-12 md:py-20 relative w-full translate-y-[-1rem] animate-fade-in"
+        <div class="flex flex-col items-center gap-6 md:gap-10 px-4 sm:px-8 md:px-16 lg:px-[200px] py-12 md:py-20 relative w-full translate-y-[-1rem] animate-fade-in"
             style="--animation-delay:1000ms">
             <div
                 class="flex flex-col max-w-[880px] items-start gap-8 md:gap-12 px-8 md:px-20 py-8 md:py-12 relative rounded-[5px] bg-[linear-gradient(180deg,rgba(255,255,255,0.08)_0%,rgba(255,255,255,0)_100%)] border-none w-full">
                 <img class="relative" alt="Frame"
                     src="https://c.animaapp.com/mhc1z55wRcb3W7/img/frame-1000004528.svg" />
                 <div class="flex flex-col items-start gap-6 md:gap-10 relative w-full mt-8 md:mt-12">
-                    <blockquote class="relative font-medium text-white text-2xl md:text-[32px] font-display">
-                        "Diverz brings the structure, speed, and context of a developer
-                        IDE to real-world network operations"
-                    </blockquote>
+                    <Transition name="fade" mode="out-in">
+                        <blockquote :key="currentSlide"
+                            class="relative font-medium text-white text-2xl md:text-[32px] font-display">
+                            {{ testimonials[currentSlide].quote }}
+                        </blockquote>
+                    </Transition>
                     <div class="flex items-center justify-between relative w-full">
-                        <p class="relative w-fit font-semibold text-[#ffffffb2] text-lg md:text-xl whitespace-nowrap">
-                            Senior Network Engineer, Fintech
-                        </p>
+                        <Transition name="fade" mode="out-in">
+                            <p :key="currentSlide"
+                                class="relative w-fit font-semibold text-[#ffffffb2] text-lg md:text-xl whitespace-nowrap">
+                                {{ testimonials[currentSlide].attribution }}
+                            </p>
+                        </Transition>
                         <div class="inline-flex items-center gap-1.5 relative">
                             <div v-for="(slide, index) in testimonialSlides" :key="index"
-                                class="relative w-2.5 h-2.5 rounded-[5px] bg-white"
-                                :class="slide.isActive ? 'bg-[#cca0ca]' : 'bg-white opacity-50'" />
+                                class="relative w-2.5 h-2.5 rounded-[5px] bg-white transition-all duration-300 ease-in-out transform"
+                                :class="slide.isActive ? 'bg-[#cca0ca] scale-110' : 'opacity-50 scale-100'" />
                         </div>
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
 
         <!-- Join our alpha programme -->
-        <!-- <div class="flex flex-col items-center gap-6 md:gap-10 px-4 sm:px-8 md:px-16 lg:px-[200px] py-16 md:py-[100px] relative w-full translate-y-[-1rem] animate-fade-in"
+        <div id="contact"
+            class="flex flex-col items-center gap-10 px-[200px] py-[100px] relative w-full translate-y-[-1rem] animate-fade-in"
             style="--animation-delay:1200ms">
             <div
-                class="flex flex-col max-w-[670px] items-center gap-6 md:gap-8 px-6 md:px-12 py-6 md:py-10 relative w-full bg-[#ffffff14] rounded-[5px] border-none">
-                <div
-                    class="absolute inset-0 p-0.5 rounded-[5px] bg-gradient-to-r from-white to-transparent -webkit-mask:linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); mask-composite:exclude; z-[1]; pointer-events-none" />
-                <div class="flex flex-col items-center gap-3 relative w-full z-10">
-                    <h2
-                        class="text-3xl md:text-[40px] relative w-fit font-semibold text-white text-center whitespace-nowrap font-display">
-                        Join our alpha programme
-                    </h2>
-                    <p class="relative max-w-[476px] font-medium text-[#ffffffb2] text-sm sm:text-base text-center">
-                        We are inviting people to join us as early alpha users to help
-                        test and shape the future of Diverz
-                    </p>
-                </div>
-                <div class="flex flex-col items-center gap-6 md:gap-10 relative w-full z-10">
-                    <form class="flex flex-col items-start gap-6 md:gap-8 relative w-full">
-                        <div class="flex flex-col items-start gap-2 relative w-full">
-                            <label class="font-semibold text-white text-xs md:text-sm leading-5">Full name</label>
-                            <input type="text" placeholder="Enter your full name"
-                                class="flex items-center gap-2.5 px-3 py-2.5 relative w-full rounded-lg border-[1.5px] border-solid border-[#ffffff4c] bg-transparent font-medium text-[#ffffffa6] text-sm md:text-base placeholder:text-[#ffffffa6]" />
-                        </div>
-                        <div class="flex flex-col items-start gap-2 relative w-full">
-                            <label class="font-semibold text-white text-xs md:text-sm leading-5">Email</label>
-                            <input type="email" placeholder="Enter your email address"
-                                class="flex items-center gap-2.5 px-3 py-2.5 relative w-full rounded-lg border-[1.5px] border-solid border-[#ffffff4c] bg-transparent font-medium text-[#ffffffa6] text-sm md:text-base placeholder:text-[#ffffffa6]" />
-                        </div>
-                        <div class="flex flex-col items-start gap-2 relative w-full">
-                            <label class="font-semibold text-white text-xs md:text-sm leading-5">Role</label>
-                            <div
-                                class="flex items-center gap-2.5 px-3 py-2.5 relative w-full rounded-lg border-[1.5px] border-solid border-[#ffffff4c] bg-transparent">
-                                <input type="text" placeholder="Enter your role"
-                                    class="flex-1 border-none bg-transparent font-medium text-[#ffffffa6] text-sm md:text-base placeholder:text-[#ffffffa6] p-0 focus-visible:ring-0 focus-visible:ring-offset-0" />
-                                <img class="relative w-[21px] h-[21px]" alt="Arrow down"
-                                    src="https://c.animaapp.com/mhc1z55wRcb3W7/img/arrow-down.svg" />
+                class="flex flex-col w-full max-w-[670px] items-center gap-8 px-12 py-10 relative bg-[#ffffff14] rounded-[5px] border-none before:content-[''] before:absolute before:inset-0 before:p-0.5 before:rounded-[5px] before:[background:linear-gradient(221deg,rgba(255,255,255,1)_0%,rgba(255,255,255,0)_100%)] before:[-webkit-mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] before:[-webkit-mask-composite:xor] before:[mask-composite:exclude] before:z-[1] before:pointer-events-none">
+                <div class="p-0 w-full">
+                    <div class="flex flex-col items-center gap-3 relative w-full">
+                        <h2
+                            class="text-[40px] relative w-fit font-semibold text-white text-center tracking-[0] leading-[normal] whitespace-nowrap font-display">
+                            Join our alpha programme
+                        </h2>
+                        <p
+                            class="relative max-w-[476px] font-medium text-[#ffffffb2] text-base text-center tracking-[0] leading-[normal]">
+                            We are inviting people to join us as early alpha users to help
+                            test and shape the future of Diverz
+                        </p>
+                    </div>
+                    <form class="flex flex-col items-center gap-10 relative w-full mt-8">
+                        <div class="flex flex-col items-start gap-8 relative w-full">
+                            <div class="flex flex-col items-start gap-2 relative w-full">
+                                <label
+                                    class="relative font-semibold text-white text-sm tracking-[0] leading-5 font-display">
+                                    Full name
+                                </label>
+                                <input type="text" placeholder="Enter your full name"
+                                    class="flex items-center gap-2.5 px-3 py-2.5 relative w-full rounded-lg border-[1.5px] border-solid border-[#ffffff4c] bg-transparent font-medium text-[#ffffffa6] text-base placeholder:text-[#ffffffa6] font-display" />
+                            </div>
+                            <div class="flex flex-col items-start gap-2 relative w-full">
+                                <label
+                                    class="relative font-semibold text-white text-sm tracking-[0] leading-5 font-display">
+                                    Email
+                                </label>
+                                <input type="email" placeholder="Enter your email address"
+                                    class="flex items-center gap-2.5 px-3 py-2.5 relative w-full rounded-lg border-[1.5px] border-solid border-[#ffffff4c] bg-transparent font-medium text-[#ffffffa6] text-base placeholder:text-[#ffffffa6] font-display" />
+                            </div>
+                            <div class="flex flex-col items-start gap-2 relative w-full">
+                                <label
+                                    class="relative font-semibold text-white text-sm tracking-[0] leading-5 font-display">
+                                    Role
+                                </label>
+                                <div
+                                    class="flex items-center gap-2.5 px-3 py-2.5 relative w-full rounded-lg border-[1.5px] border-solid border-[#ffffff4c]">
+                                    <input type="text" placeholder="Enter your role"
+                                        class="relative flex-1 border-none bg-transparent p-0 font-medium text-[#ffffffa6] text-base placeholder:text-[#ffffffa6] focus-visible:ring-0 focus-visible:ring-offset-0 font-display" />
+                                    <img class="relative w-[21px] h-[21px]" alt="Arrow down"
+                                        src="https://c.animaapp.com/mhc1z55wRcb3W7/img/arrow-down.svg" />
+                                </div>
                             </div>
                         </div>
+                        <button
+                            class="flex w-[161px] h-auto items-center justify-center gap-2.5 px-6 py-3 relative bg-[#574fa1] rounded-[10px] hover:bg-[#574fa1]/90 transition-colors">
+                            <span
+                                class="relative w-fit font-medium text-white text-base text-center tracking-[0] leading-[normal] whitespace-nowrap font-display">
+                                Submit
+                            </span>
+                        </button>
                     </form>
-                    <button
-                        class="flex w-[161px] items-center justify-center gap-2.5 px-6 py-3 h-auto bg-[#574fa1] rounded-[10px] hover:opacity-90 transition-opacity">
-                        <span class="font-medium text-white text-base text-center whitespace-nowrap">
-                            Submit
-                        </span>
-                    </button>
                 </div>
             </div>
-        </div> -->
-
+        </div>
         <!-- FAQ -->
-        <!-- <div class="flex flex-col max-w-[772px] items-center gap-8 md:gap-14 relative translate-y-[-1rem] animate-fade-in w-full"
+        <div class="flex flex-col max-w-[772px] items-center gap-8 md:gap-14 relative translate-y-[-1rem] animate-fade-in w-full"
             style="--animation-delay:1400ms">
             <div class="flex flex-col items-center gap-3 relative w-full">
                 <h2
@@ -263,18 +259,20 @@
                     Find quick answers to common questions about Diverz
                 </p>
             </div>
+
             <div class="flex flex-col items-center gap-6 md:gap-10 relative w-full">
                 <div class="flex flex-col w-full relative">
                     <div class="flex flex-wrap items-center gap-2 md:gap-4 relative w-full bg-transparent h-auto p-0">
-                        <button v-for="(category, index) in faqCategories" :key="index"
+                        <button v-for="(category, index) in faqs" :key="index" @click="selectCategory(index)"
                             class="flex items-center justify-center gap-2.5 px-4 py-3 flex-1 rounded-[5px] transition-colors min-w-[100px]"
-                            :class="category.isActive ? 'bg-white text-black' : 'bg-[#ffffff1a] text-white'">
+                            :class="selectedCategoryIndex === index ? 'bg-white text-black' : 'bg-[#ffffff1a] text-white'">
                             <span class="font-medium text-sm md:text-base text-center whitespace-nowrap">
                                 {{ category.label }}
                             </span>
                         </button>
                     </div>
                 </div>
+
                 <div class="flex flex-col items-start gap-6 md:gap-[37px] relative w-full">
                     <div v-for="(item, index) in faqItems" :key="index"
                         class="flex flex-col w-full items-start pt-2.5 pb-6 px-2.5 relative"
@@ -285,22 +283,25 @@
                                 class="relative w-fit font-medium text-white text-sm md:text-base text-left leading-normal">
                                 {{ item.question }}
                             </span>
-                            <img :src="item.isExpanded ? 'https://c.animaapp.com/mhc1z55wRcb3W7/img/group-6.png' : 'https://c.animaapp.com/mhc1z55wRcb3W7/img/group-7.png'"
-                                class="relative w-[18px] h-[18px] flex-shrink-0 transition-opacity"
-                                :class="item.isExpanded ? 'opacity-0' : 'opacity-100'" alt="Toggle" />
+                            <img src="https://c.animaapp.com/mhc1z55wRcb3W7/img/group-7.png"
+                                class="relative w-[18px] h-[18px] flex-shrink-0 transition-transform duration-300"
+                                :class="item.isExpanded ? 'rotate-180' : 'rotate-0'" alt="Toggle" />
                         </button>
-                        <div v-if="item.answer && item.isExpanded"
-                            class="relative max-w-[472px] font-medium text-white text-sm md:text-base leading-normal pt-2 mt-2">
-                            {{ item.answer }}
-                        </div>
+                        <transition name="fade">
+                            <div v-if="item.answer && item.isExpanded"
+                                class="relative max-w-[472px] font-medium text-white text-sm md:text-base leading-normal pt-2 mt-2">
+                                {{ item.answer }}
+                            </div>
+                        </transition>
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
 
         <div
-            class="absolute top-[3980px] left-[50%] -translate-x-1/2 w-[521px] h-[521px] bg-[#574fa1] rounded-[260.5px] blur-[355px] pointer-events-none md:left-[580px] md:translate-x-0" />
-    </section>
+            class="absolute top-[4590px] left-[50%] -translate-x-1/2 w-[541px] h-[621px] bg-[#574fa1] rounded-[260.5px] blur-[355px] pointer-events-none md:left-[690px] md:translate-x-0" />
+   
+   </section>
 </template>
 
 
@@ -401,71 +402,209 @@ const engineerFeatures = [
     },
 ]
 
-const faqCategories = [
-    { label: "Pricing", isActive: true },
-    { label: "Category 1", isActive: false },
-    { label: "Category 2", isActive: false },
-    { label: "Category 3", isActive: false },
+const testimonials = [
+    {
+        quote: "Diverz brings the structure, speed, and context of a developer IDE to real-world network operations",
+        attribution: "Senior Network Engineer, Fintech"
+    },
+    {
+        quote: "Transformed our NetOps workflow overnight with seamless automation and context-aware tools.",
+        attribution: "DevOps Lead, Telecom"
+    },
+    {
+        quote: "The AI assistant is a game-changer for config management and troubleshooting.",
+        attribution: "Network Architect, Enterprise"
+    },
+    {
+        quote: "Seamless integration with our existing tools—finally, developer-grade speed in NetOps.",
+        attribution: "IT Director, Cloud Provider"
+    },
+    {
+        quote: "Automation that's safe, explainable, and vendor-correct—revolutionizing our operations.",
+        attribution: "Security Engineer, Bank"
+    }
 ]
 
-const faqItems = ref([
-    {
-        question: "What is Diverz?",
-        answer:
-            "Lorem ipsum dolor sit amet consectetur. Sit neque ullamcorper eget orci suscipit et a nullam ultrices",
-        isExpanded: true,
-    },
-    {
-        question: "Who can use Diverz?",
-        answer: "",
-        isExpanded: false,
-    },
-    {
-        question:
-            "How is Diverz different from tools like GNS3, EVE-NG, or legacy CLIs?",
-        answer: "",
-        isExpanded: false,
-    },
-    {
-        question: "Which vendors and devices does Diverz support?",
-        answer: "",
-        isExpanded: false,
-    },
-    {
-        question: "Can Diverz generate and translate configs automatically?",
-        answer: "",
-        isExpanded: false,
-    },
-    {
-        question: "How does Diverz handle troubleshooting across multiple devices?",
-        answer: "",
-        isExpanded: false,
-    },
-    {
-        question: "Is Diverz available as both cloud and on-prem deployment?",
-        answer: "",
-        isExpanded: false,
-    },
-    {
-        question: "Is Diverz free to use, and what's included in the free plan?",
-        answer: "",
-        isExpanded: false,
-    },
-])
+const currentSlide = ref(0)
 
-const testimonialSlides = [
-    { isActive: true },
-    { isActive: false },
-    { isActive: false },
-    { isActive: false },
-    { isActive: false },
+const testimonialSlides = computed(() =>
+    testimonials.map((slide, index) => ({
+        ...slide,
+        isActive: index === currentSlide.value
+    }))
+)
+
+const faqs = [
+    {
+        label: "Pricing",
+        faqItems: [
+            {
+                question: "What is Diverz?",
+                answer:
+                    "Lorem ipsum dolor sit amet consectetur. Sit neque ullamcorper eget orci suscipit et a nullam ultrices",
+                isExpanded: true,
+            },
+            {
+                question: "Who can use Diverz?",
+                answer: "",
+                isExpanded: false,
+            },
+            {
+                question:
+                    "How is Diverz different from tools like GNS3, EVE-NG, or legacy CLIs?",
+                answer: "",
+                isExpanded: false,
+            },
+            {
+                question: "Which vendors and devices does Diverz support?",
+                answer: "",
+                isExpanded: false,
+            },
+            {
+                question: "Can Diverz generate and translate configs automatically?",
+                answer: "",
+                isExpanded: false,
+            },
+            {
+                question: "How does Diverz handle troubleshooting across multiple devices?",
+                answer: "",
+                isExpanded: false,
+            },
+            {
+                question: "Is Diverz available as both cloud and on-prem deployment?",
+                answer: "",
+                isExpanded: false,
+            },
+            {
+                question: "Is Diverz free to use, and what's included in the free plan?",
+                answer: "",
+                isExpanded: false,
+            },
+        ]
+    },
+    {
+        label: "Category 1", faqItems: [
+            {
+                question: "What is Diverz?",
+                answer:
+                    "category 1 Lorem ipsum dolor sit amet consectetur. Sit neque ullamcorper eget orci suscipit et a nullam ultrices",
+                isExpanded: true,
+            },
+            {
+                question: "Who can use Diverz?",
+                answer: "",
+                isExpanded: false,
+            },
+            {
+                question:
+                    "How is Diverz different from tools like GNS3, EVE-NG, or legacy CLIs?",
+                answer: "",
+                isExpanded: false,
+            },
+            {
+                question: "Which vendors and devices does Diverz support?",
+                answer: "",
+                isExpanded: false,
+            },
+            {
+                question: "Can Diverz generate and translate configs automatically?",
+                answer: "",
+                isExpanded: false,
+            },
+            {
+                question: "How does Diverz handle troubleshooting across multiple devices?",
+                answer: "",
+                isExpanded: false,
+            },
+            {
+                question: "Is Diverz available as both cloud and on-prem deployment?",
+                answer: "",
+                isExpanded: false,
+            },
+            {
+                question: "Is Diverz free to use, and what's included in the free plan?",
+                answer: "",
+                isExpanded: false,
+            },
+        ]
+    },
+    {
+        label: "Category 2", faqItems: [
+            {
+                question: "What is Diverz?",
+                answer:
+                    "Lorem ipsum dolor sit amet consectetur. Sit neque ullamcorper eget orci suscipit et a nullam ultrices",
+                isExpanded: true,
+            },
+            {
+                question: "Who can use Diverz?",
+                answer: "",
+                isExpanded: false,
+            },
+            {
+                question:
+                    "How is Diverz different from tools like GNS3, EVE-NG, or legacy CLIs?",
+                answer: "",
+                isExpanded: false,
+            },
+            {
+                question: "Which vendors and devices does Diverz support?",
+                answer: "",
+                isExpanded: false,
+            },
+            {
+                question: "Can Diverz generate and translate configs automatically?",
+                answer: "",
+                isExpanded: false,
+            },
+            {
+                question: "How does Diverz handle troubleshooting across multiple devices?",
+                answer: "",
+                isExpanded: false,
+            },
+            {
+                question: "Is Diverz available as both cloud and on-prem deployment?",
+                answer: "",
+                isExpanded: false,
+            },
+            {
+                question: "Is Diverz free to use, and what's included in the free plan?",
+                answer: "",
+                isExpanded: false,
+            },
+        ]
+    }
 ]
+
+const selectedCategoryIndex = ref(0)
+const faqItems = ref([...faqs[selectedCategoryIndex.value].faqItems])
+
+const selectCategory = (index) => {
+    selectedCategoryIndex.value = index
+    faqItems.value = faqs[index].faqItems.map((item, i) => ({
+        ...item,
+        isExpanded: i === 0,
+    }))
+}
 
 const toggleFaq = (index) => {
-    faqItems.value.forEach((item, i) => {
-        item.isExpanded = i === index
-    })
+    faqItems.value = faqItems.value.map((item, i) => ({
+        ...item,
+        isExpanded: i === index ? !item.isExpanded : false,
+    }))
 }
+
+let interval = null
+
+onMounted(() => {
+    interval = setInterval(() => {
+        currentSlide.value = (currentSlide.value + 1) % testimonials.length
+    }, 5000)
+})
+
+onUnmounted(() => {
+    clearInterval(interval)
+})
 </script>
 
 <style scoped>

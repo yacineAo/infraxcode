@@ -1,11 +1,11 @@
 <template>
-    <footer class="flex flex-col w-full items-start gap-16 px-[200px] py-[72px] border-t [border-top-style:solid] border-[#ffffff52]
+    <footer class="flex flex-col w-full items-start gap-16 px-4 md:px-[200px] py-[72px] border-t [border-top-style:solid] border-[#ffffff52]
            bg-[linear-gradient(179deg,rgba(22,22,23,1)_0%,rgba(22,22,23,0)_100%)]">
         <!-- Top section -->
-        <div class="flex items-start justify-between w-full">
+        <div class="flex flex-col md:flex-row items-start justify-between w-full gap-10">
             <!-- Brand description -->
             <div
-                class="flex flex-col w-[302px] items-start gap-6 translate-y-[-1rem] animate-fade-in [--animation-delay:0ms]">
+                class="flex flex-col md:w-[302px] items-start gap-6 translate-y-[-1rem] animate-fade-in [--animation-delay:0ms]">
                 <img class="w-[177px] h-[39.59px]" alt="Infraxcode dark"
                     src="https://c.animaapp.com/mhalnqzadLBG4i/img/infraxcode-dark-2.svg" />
 
@@ -18,7 +18,7 @@
             </div>
 
             <!-- Navigation / contact / legal -->
-            <nav class="inline-flex items-start justify-end gap-20">
+            <nav class="md:inline-flex md:flex-row flex-col flex items-start justify-end md:gap-20 gap-10">
                 <!-- Navigation links -->
                 <div
                     class="flex flex-col w-[66px] items-start gap-6 translate-y-[-1rem] animate-fade-in [--animation-delay:200ms]">
@@ -63,7 +63,7 @@
 
         <!-- Bottom section -->
         <div
-            class="flex items-center justify-between w-full translate-y-[-1rem] animate-fade-in [--animation-delay:800ms]">
+            class="flex flex-col md:flex-row items-center justify-between w-full translate-y-[-1rem] animate-fade-in [--animation-delay:800ms] gap-4">
             <p
                 class="[font-family:'Inter_Display-Medium',Helvetica] font-medium text-[#ffffffcc] text-sm tracking-[0] leading-[21px] whitespace-nowrap">
                 2025 Diverz. All Rights Reserved

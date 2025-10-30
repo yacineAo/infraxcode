@@ -1,9 +1,9 @@
 <template>
-    <div class="flex flex-col w-full items-start gap-4 md:gap-8 pt-8 md:pt-12 pb-16 md:pb-[100px] px-4 sm:px-8 md:px-16 lg:px-[200px] relative overflow-hidden translate-y-[-1rem] animate-fade-in"
+    <div id="features" class="flex flex-col w-full items-start gap-4 md:gap-8 pt-8 md:pt-12 pb-16 md:pb-[100px] px-4 sm:px-8 md:px-16 lg:px-[200px] relative overflow-hidden translate-y-[-1rem] animate-fade-in"
         :style="{ '--animation-delay': animationDelay }">
         <div class="flex flex-col w-full items-center gap-2 md:gap-4 relative">
             <h2
-                class="relative w-fit font-semibold text-white text-3xl sm:text-4xl lg:text-[40px] whitespace-nowrap font-display">
+                class="relative w-fit font-semibold text-white text-3xl sm:text-4xl lg:text-[40px] font-display">
                 {{ title }}
             </h2>
             <p class="relative max-w-[510px] font-medium text-[#ffffffb2] text-sm sm:text-base text-center">
@@ -34,8 +34,8 @@
             </div>
             <div
                 class="w-full h-[80vh] sticky top-0 flex items-center justify-center pl-0 lg:pl-4 order-1 lg:order-2 px-4 lg:px-0 z-10">
-                <img class="w-full h-full rounded-[5px] md:rounded-[10px] object-cover" :alt="`Feature ${currentIndex + 1}`"
-                    :src="features[currentIndex]?.image" />
+                <img class="w-full h-full rounded-[5px] md:rounded-[10px] object-cover"
+                    :alt="`Feature ${currentIndex + 1}`" :src="features[currentIndex]?.image" />
             </div>
         </div>
     </div>
@@ -72,15 +72,17 @@ const features = [
         subtitle: "",
         description:
             "SSH, NETCONF, RESTCONF, SNMP, gRPC, APIs with support for bastions, profiles, and session logging",
-        image: "https://c.animaapp.com/mhc1z55wRcb3W7/img/feature-3-1.png",
+        image:
+            "https://c.animaapp.com/mhc1z55wRcb3W7/img/feature-1---last-plan-1-1.png",
+
     },
     {
         title: "In-Context AI Assistant",
         subtitle: "",
         description:
             "Reads your sessions, parses configs, and writes vendor-correct CLI and API commands. Reversible, explainable, and safe",
-        image:
-            "https://c.animaapp.com/mhc1z55wRcb3W7/img/feature-1---last-plan-1-1.png",
+        image: "https://c.animaapp.com/mhc1z55wRcb3W7/img/feature-3-1.png",
+
     },
 ]
 

@@ -8,9 +8,9 @@
       <SectionsFeaturesSection />
     </section>
 
-    <!-- <section class="relative w-full translate-y-[-1rem] animate-fade-in [--animation-delay:600ms]">
+    <section class="relative mt-20 w-full animate-fade-in [--animation-delay:600ms]">
       <SectionsTestimonialsSection />
-    </section> -->
+    </section>
   </div>
 </template>
 
