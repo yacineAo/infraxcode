@@ -1,10 +1,9 @@
 <template>
-    <section class="w-full flex flex-col items-center gap-[99px] bg-[#000000] py-[137px]">
-        <div
-            class="inline-flex w-full max-w-[700px] flex-col items-center gap-8 px-4 translate-y-[-1rem] animate-fade-in">
+    <section class="w-full flex flex-col items-center gap-[99px] bg-black py-[137px]">
+        <div class="inline-flex w-full flex-col items-center gap-8 px-4 translate-y-[-1rem] animate-fade-in">
             <!-- Title -->
-            <div class="flex flex-col items-center gap-3 w-full">
-                <h1 class="w-fit font-semibold text-white text-[56px] text-center leading-[normal]"
+            <div class="flex flex-col items-center gap-7 w-full">
+                <h1 class="w-fit font-semibold text-white md:text-[56px] text-4xl text-center leading-[normal]"
                     style="font-family: 'Inter Display', Helvetica;">
                     An AI-native CLI Workspace
                 </h1>
@@ -15,13 +14,12 @@
                         style="font-family: 'Inter Display', Helvetica;">
                         Augment your
                     </p>
-
-                    <div class="inline-flex items-center justify-center gap-2.5 px-0 py-[3px] rounded-[5px]">
-                        <p class="w-fit font-medium text-white text-2xl text-center leading-[normal]"
-                            style="font-family: 'Inter Display', Helvetica;">
-                            NetOps,
-                        </p>
-                    </div>
+                    
+                    <RotatingText :texts="words"
+                        :mainClassName="`text-white w-fit font-medium text-white text-2xl text-center leading-[normal]`"
+                        :staggerFrom="'last'" :initial="{ y: '100%' }" :animate="{ y: 0 }" :exit="{ y: '-120%' }"
+                        :staggerDuration="0.025" :splitLevelClassName="'overflow-hidden pb-0.5 sm:pb-1 md:pb-1'"
+                        :transition="{ type: 'spring', damping: 30, stiffness: 400 }" :rotationInterval="2000" />
 
                     <p class="w-fit font-medium text-[#ffffffb2] text-2xl text-center leading-[normal]"
                         style="font-family: 'Inter Display', Helvetica;">
@@ -47,5 +45,24 @@
 </template>
 
 <script setup lang="ts">
+import { ref, onMounted, onBeforeUnmount } from "vue";
 import Button from "~/components/ui/Button.vue";
+import RotatingText from "../ui/RotatingText.vue";
+
+const words = ["NetOps", "DevOps", "SysOps", "SycOps"];
+const currentIndex = ref(0);
+const currentWord = ref(words[currentIndex.value]);
+
+let interval: ReturnType<typeof setInterval>;
+
+onMounted(() => {
+    interval = setInterval(() => {
+        currentIndex.value = (currentIndex.value + 1) % words.length;
+        currentWord.value = words[currentIndex.value];
+    }, 2000);
+});
+
+onBeforeUnmount(() => {
+    clearInterval(interval);
+});
 </script>

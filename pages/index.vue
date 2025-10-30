@@ -4,11 +4,11 @@
       <CallToActionSection />
     </section>
 
-    <!-- <section class="relative w-full translate-y-[-1rem] animate-fade-in [--animation-delay:400ms]">
+    <section class="relative w-full translate-y-[-1rem] animate-fade-in [--animation-delay:400ms]">
       <SectionsFeaturesSection />
     </section>
 
-    <section class="relative w-full translate-y-[-1rem] animate-fade-in [--animation-delay:600ms]">
+    <!-- <section class="relative w-full translate-y-[-1rem] animate-fade-in [--animation-delay:600ms]">
       <SectionsTestimonialsSection />
     </section> -->
   </div>

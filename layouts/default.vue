@@ -2,7 +2,7 @@
   <div class="bg-[#000000] overflow-hidden w-full relative max-w-[2400px] mx-auto">
     <!-- Header -->
     <header
-      class="flex w-full items-center justify-between px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-[200px] py-3 fixed top-0 left-0 right-0 z-50 backdrop-blur-[7.5px] backdrop-brightness-[100%] bg-[linear-gradient(180deg,rgba(0,0,0,0.38)_0%,rgba(0,0,0,0)_100%)] animate-fade-in relative">
+      class="flex w-full items-center justify-between px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-[200px] py-3 fixed top-0 left-0 right-0 z-50 backdrop-blur-[7.5px] backdrop-brightness-[100%] bg-[linear-gradient(180deg,rgba(0,0,0,0.38)_0%,rgba(0,0,0,0)_100%)] animate-fade-in">
       <img class="relative w-[134px] h-[29.97px] md:w-[100px] md:h-[22px]" alt="Infraxcode dark"
         src="https://c.animaapp.com/mhalnqzadLBG4i/img/infraxcode-dark-2-1.svg" />
 
